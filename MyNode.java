@@ -10,10 +10,12 @@ public class MyNode<K> implements INode<K> {
         this.next = null;
     }
 
+    @Override
     public K getKey(){
         return key;
     }
 
+    @Override
     public void setKey(K key){
         this.key = key;
     }
