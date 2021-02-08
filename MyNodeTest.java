@@ -2,6 +2,7 @@ package bridgelabz;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 public class MyNodeTest {
     @Test
     public void given3NumbersWhenLinkedShouldPassedLinkedListTest() {
