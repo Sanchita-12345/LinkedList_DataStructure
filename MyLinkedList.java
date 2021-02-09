@@ -45,13 +45,23 @@ public class MyLinkedList {
         newNode.setNext(tempNode);
     }
 
-    //Delete First Element
+    //Delete 1st Element
     public INode pop() {
         INode tempNode = this.head;
         this.head = head.getNext();
         return tempNode;
     }
 
+    //Delete Last Element
+    public INode popLast() {
+        INode tempNode = head;
+        while (!tempNode.getNext().equals(tail)) {
+            tempNode = tempNode.getNext();
+        }
+        this.tail = tempNode;
+        tempNode = tempNode.getNext();
+        return tempNode;
+    }
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
