@@ -86,6 +86,13 @@ public class MyLinkedList<K> {
         return size;
     }
 
+    //Insert a new number
+    public void insertNew(INode myNode, INode newNode) {
+        INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
+    
     //Delete middle element
     public void deleteMiddleElement(MyNode<Integer> key) {
         INode tempNode = this.head;
