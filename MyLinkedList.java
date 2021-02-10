@@ -86,6 +86,12 @@ public class MyLinkedList<K> {
         }
         return size;
     }
+    //Insert a new number
+    public void insertNew(INode myNode, INode newNode) {
+        INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
 
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
