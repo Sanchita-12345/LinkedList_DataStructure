@@ -32,8 +32,7 @@ public class MyLinkedList<K> {
         }
         if (this.tail == null) {
             this.tail = myNode;
-        }
-		  else {
+        } else {
             this.tail.setNext(myNode);
             this.tail = myNode;
         }
@@ -85,6 +84,16 @@ public class MyLinkedList<K> {
             tempNode = tempNode.getNext();
         }
         return size;
+    }
+
+    //Delete middle element
+    public void deleteMiddleElement(MyNode<Integer> key) {
+        INode tempNode = this.head;
+        while (!tempNode.getNext().equals(key)) {
+            tempNode = tempNode.getNext();
+        }
+        tempNode.setNext(tempNode.getNext().getNext());
+        System.out.println("size of linklist:" + size());
     }
 
     public void printMyNodes() {
